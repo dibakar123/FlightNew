@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration> 
+    <session-factory> 
+
+         <property name="connection.driver_class">com.mysql.jdbc.Driver</property> 
+         <property name="connection.url">jdbc:mysql://localhost:3306/AirlinkDB</property> 
+         <property name="connection.username">root</property> 
+         <property name="connection.password">rugvija</property> 
+         <property name="connection.pool_size">1</property> 
+
+         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+
+          <property name="current_session_context_class">thread</property> 
+        
+
+         <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+
+         <property name="show_sql">true</property> 
+        
+
+         <property name="hbm2ddl.auto">update</property> 
+         
+        <mapping class="model.Booking"/> 
+        <mapping class="model.DailyStatus"/> 
+        <mapping class="model.Flights"/> 
+        <mapping class="model.Seats"/> 
+        <mapping class="model.Passengers"/>
+        <mapping class="model.Payment"/>
+        <mapping class="model.PassengerService"/>
+        <!-- <mapping class="model.DailyFlight"/> -->
+        
+       <!--  <mapping class="model.Flight"/>  -->
+      <!--   <mapping class="model.UserPosts"/>
+        <mapping class="model.Users2"/> 
+        <mapping class="model.UserPosts2"/> -->
+                  
+     </session-factory> 
+ </hibernate-configuration>
